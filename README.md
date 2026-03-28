@@ -10,8 +10,6 @@ It provides domain-restricted answers strictly for:
 * EU AI Act (Artificial Intelligence Act)
 * DORA (Digital Operational Resilience Act)
 
-The system enforces strict guardrails and includes a feedback loop for continuous improvement.
-
 ---
 
 ## 🚀 Features
@@ -27,12 +25,6 @@ The system enforces strict guardrails and includes a feedback loop for continuou
 * Rejects unrelated queries
 * Prevents hallucinated responses
 * Enforces domain-specific answers
-
-### ✅ Feedback Loop (NEW)
-
-* 👍 / 👎 buttons for each response
-* Stores feedback in `feedback.json`
-* Enables future model improvement
 
 ### ✅ Deterministic Responses
 
@@ -104,36 +96,10 @@ Ask questions like:
 
 ---
 
-## 🔁 Feedback System
-
-Each response includes:
-
-* 👍 Helpful
-* 👎 Not Helpful
-
-Feedback is stored in:
-
-```
-feedback.json
-```
-
-Example:
-
-```
-{
-  "question": "...",
-  "answer": "...",
-  "feedback": "up"
-}
-```
-
----
-
 ## 🧠 Design Choices
 
 * Local LLM → Privacy + zero cost
 * Guardrails → Prevent hallucination
-* Feedback loop → Enables RL-style improvement
 * Streaming → Better UX
 
 ---
@@ -143,7 +109,6 @@ Example:
 * RAG with official EU legal documents
 * FastAPI backend
 * Feedback analytics dashboard
-* Cloud deployment (AWS / Azure)
 
 ---
 
@@ -151,7 +116,6 @@ Example:
 
 * Depends on LLM knowledge (no real legal validation)
 * Basic keyword-based guardrail
-* No backend persistence (JSON only)
 
 ---
 
@@ -171,6 +135,6 @@ Academic / educational use
 
 ## 💬 Final Note
 
-This project demonstrates a **controlled AI chatbot with guardrails and feedback learning**.
+This project demonstrates a **controlled AI chatbot with guardrails**.
 
 It is a strong foundation for building a **RegTech AI system**.
